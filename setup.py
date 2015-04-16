@@ -4,16 +4,16 @@ except ImportError:
     from distutils.core import setup
 
 config = {
-        'description': 'My Project',
-        'author': 'George Pandzik',
-        'url': 'http://github.com/gepandz/NAME',
-        'download_url': 'git://github.com/gepandz/NAME',
-        'author_email': 'nope@uhuh.net',
+        'description': 'Script that talks to a database and returns an HTTP redirect',
+        'author': 'John and George Pandzik',
+        'url': 'http://github.com/jspandz/Python-Redirect',
+        'download_url': 'git://github.com/jspandz/Python-Redirect',
+        'author_email': 'jspandz@gmail.com',
         'version': '0.1',
         'install_requires': ['nose'],
-        'packages': ['NAME'],
+        'packages': ['Python-Redirect'],
         'scripts': [],
-        'name': 'projectname',
+        'name': 'Python-Redirect',
 }
 
 setup(**config)
