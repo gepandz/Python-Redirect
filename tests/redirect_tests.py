@@ -1,5 +1,5 @@
 from nose.tools import *
-import NAME
+import Redirect
 
 def setup():
     print "SETUP!"
