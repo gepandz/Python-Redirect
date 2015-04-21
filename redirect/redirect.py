@@ -26,25 +26,33 @@ History
 Date     Programmer Comment
 ------------------------------------------------------------------------------
 20150416 G.Pandzik  Initial version created with J.Pandzik
+20150420 G.Pandzik  Create Redirect class definition
 """
 
-class Foo(object):
-    """
-    Foo encapsulates a name and an age.
-    """
-    def __init__(self, name, age):
-        """
-        Construct a new 'Foo' object.
-        """
-        self.name = name
-        self.age
+class Redirect(object):
+    """ Maps a URL to its redirection
 
-def bar(baz):
-    """
-    Prints baz to the display.
-    """
-    print baz
+    Tracks information kept about each Redirection
 
-if __name__ == '__main__':
-    f = Foo('John Doe', 42)
-    bar("hello world")
+    Attributes:
+        shortURL: name used by caller; the source of the redirect
+        fullURL: Target of redirection
+        owners: list of user names who own and can modify Redirect
+        creator: name of user who created the Redirect
+        dateCreated: datetime of creation of Redirect
+        dateModified: datetime of last modification of Redirect
+        useCount: Number of times the Redirect has been used
+        isPrivate: flag to indicate whether users not in the owners table can use the Redirect
+    """
+    def __init__(self, shortURL, fullURL, owners, creator, dateCreated, 
+                 dateModified, useCount, isPrivate):
+        """ Construct a new 'Redirect' object."""
+        self.shortURL = shortURL
+        self.fullURL = fullURL
+        self.owners = owners
+        self.creator = creator
+        self.dateCreated = dateCreated
+        self.dateModified = dateModified
+        self.useCount = useCount
+        self.isPrivate = isPrivate
+
