@@ -1,5 +1,5 @@
 from nose.tools import *
-import Redirect
+from redirect.redirect import Redirect
 
 def setup():
     print "SETUP!"
